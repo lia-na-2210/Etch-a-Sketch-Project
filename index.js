@@ -7,8 +7,19 @@ function createGrid (numDivs) {
         cells.innerText = '';
 
         mainContainer.appendChild(cells);
+        cells.addEventListener('mouseover', mouseOver(cells));
     }
+
+    
 }
+
+function mouseOver(square) {
+    console.log('cell');
+    document.getElementsByClassName(cell).style.backgroundColor = 'black';
+}
+
+document.body.onload = createGrid(256);
+
 
 /*function ask() {
     let input = prompt('Pick a number lower than 100: ')
@@ -18,7 +29,3 @@ function createGrid (numDivs) {
     input = parseInt(input);
     createGrid(input);
 }*/
-
-
-
-document.body.onload = createGrid(256);
