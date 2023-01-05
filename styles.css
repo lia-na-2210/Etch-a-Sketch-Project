@@ -5,7 +5,10 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+
+    background-color: brown;
 }
+
 
 .center{
     position: absolute;
@@ -13,6 +16,8 @@ body {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+
+    background-color: white;
 }
 
 #container {
@@ -26,4 +31,15 @@ body {
     border: 1px solid gray;
 }
 
+button {
+    border: 3px solid goldenrod;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-right: 10px;
+    background-color: brown;
+    color: white;
+    padding: 10px 20px;
+    
+}
 

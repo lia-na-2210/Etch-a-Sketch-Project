@@ -5,7 +5,15 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <button onclick= ask()>Size</button>
+        <div class="button">
+            <button onclick= "ask()">Size</button>
+            <button onclick= "colourChange('white')">Erase</button>
+            <button onclick="colourChange('black')">Draw</button>
+            <button onclick="clearBoard()">Clear</button>
+            <button onclick="colourChange('random')">Random</button>
+            
+        </div>
+        
         <div class="center">
             <div id="container"></div>
         </div>

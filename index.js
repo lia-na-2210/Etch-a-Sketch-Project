@@ -1,4 +1,5 @@
 const mainContainer = document.getElementById('container');
+let colour = 'black'
 
 function createGrid (size) {
     mainContainer.style.gridTemplateColumns = `repeat(${size}, 1fr`;
@@ -15,12 +16,15 @@ function createGrid (size) {
         cells.innerText = '';
 
         mainContainer.appendChild(cells);
-        cells.addEventListener('mouseover', () => {
-            cells.style.backgroundColor = 'black';
-        });
+
+        cells.addEventListener('mouseover', colorCell);
     }
 
     
+}
+
+function colorCell () {
+    this.style.backgroundColor = colour;
 }
 
 function ask() {
@@ -33,6 +37,20 @@ function ask() {
         console.log('error'); 
     }
         
+}
+
+function colourChange(choice) {
+    if (choice == 'random') {
+        randomColour = Math.floor(Math.random()*16777215).toString(16);
+        colour = '#' + randomColour
+    } else {
+        colour = choice
+    }
+}
+
+function clearBoard() {
+    let squares = mainContainer.querySelectorAll('div');
+    squares.forEach((div)=> div.style.backgroundColor = 'white');
 }
 
 
